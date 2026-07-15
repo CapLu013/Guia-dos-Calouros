@@ -622,3 +622,35 @@ section[id] {
     /* Ajuste esse valor (80px) de acordo com a altura aproximada do seu menu fixo */
     scroll-margin-top: 85px; 
 }
+
+/* Remove formatação padrão de link azul/sublinhado nos cards clicáveis */
+.card-link-completo {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito visual ao passar o mouse no card inteiro */
+.card-link-completo:hover .card {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo para os títulos dos cards com múltiplos links */
+.titulo-card-multiplo {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Organiza os links internos para os cards múltiplos */
+.links-internos a {
+    text-decoration: none;
+    color: #007bff; /* Ou a cor padrão de link do seu site */
+    display: inline-block;
+    margin: 4px 0;
+}
+
+.links-internos a:hover {
+    text-decoration: underline;
+}
