@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia dos Calouros - UNIVESP</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+        <!-- Barra de Progresso de Leitura -->
+        <div id="progress-bar"></div>
+
+    <!-- NAVEGAÇÃO FIXA -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-univesp">Guia dos<strong> Calouros</strong></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#primeiros-passos">Primeiros Passos</a></li>
+                <li><a href="#curso">Seu Curso</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#checklist">Checklist</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <!-- <li><button id="dark-mode-toggle" title="Alterar Modo Escuro"><i class="fa-solid fa-moon"></i></button></li> -->
+            </ul>
+            <!--<button id="dark-mode-toggle" title="Alterar Modo Escuro"><i class="fa-solid fa-moon"></i></button> -->
+        </nav>
+        <a href="#primeiros-passos" class="btn btn-primary">Começar</a> <button id="dark-mode-toggle" title="Alterar Modo Escuro"><i class="fa-solid fa-moon"></i></button>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="subtitle">BEM-VINDO AO GUIA DO CALOURO</span>
+                <h1>Seu futuro<br><span>começa aqui!</span></h1>
+                <p>Um guia rápido e interativo para te ajudar a dar os primeiros passos na universidade.</p>
+                <div class="hero-buttons">
+                    <a href="#primeiros-passos" class="btn btn-primary">Começar agora</a>
+                    <a href="#checklist" class="btn btn-secondary">Ver checklist</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                    <!-- Procure por este bloco na seção Hero do seu index.html e substitua: -->
+                    <div class="hero-image">
+                    <!-- Tag da imagem apontando para a pasta img/ -->
+                    <img src="img/banner2.png" alt="Dois estudantes de Engenharia da UNIVESP com mochila" class="banner-img">
+            </div>
+                <!-- Espaço para a ilustração dos alunos 
+                <div class="illustration-placeholder"> 
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>-->
+            </div>
+        </section>
+
+        <!-- 1. PRIMEIROS PASSOS -->
+        <section id="primeiros-passos" class="section">
+            <h2 class="section-title">1. PRIMEIROS PASSOS</h2>
+            <div class="grid-cards-5">
+                
+                
+                <div class="card">
+                    <i class="fa-solid fa-laptop-code icon"></i>
+                    <h3>Acesse o AVA</h3>
+                    <p>Use seu RA e senha para acessar o Ambiente Virtual de Aprendizagem.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-regular fa-calendar-alt icon"></i>
+                    <h3>Calendário</h3>
+                    <p>Fique atento ao calendário acadêmico e às datas das provas.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-youtube icon"></i>
+                    <h3>Videoaulas</h3>
+                    <p>As aulas são gravadas. Assista quando puder, mas não deixe para depois!</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-users icon"></i>
+                    <h3>Facilitador</h3>
+                    <p>Ele tira suas dúvidas e orienta suas atividades no AVA e nos fóruns.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-file-lines icon"></i>
+                    <h3>Secretaria</h3>
+                    <p>Solicite documentos e serviços pelo sistema acadêmico (SEI UNIVESP).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SEU CURSO 
+        <section id="curso" class="section section-gray">
+            <h2 class="section-title">2. CONHEÇA SEU CURSO: ENGENHARIA DA COMPUTAÇÃO</h2>
+            <div class="course-flow">
+                <div class="flow-item">
+                    <i class="fa-solid fa-microchip icon"></i>
+                    <p>Integra hardware e software para criar soluções completas.</p>
+                </div>
+                <i class="fa-solid fa-arrow-right flow-arrow"></i>
+                <div class="flow-item">
+                    <i class="fa-regular fa-lightbulb icon"></i>
+                    <p>Resolve problemas reais com tecnologia e inovação.</p>
+                </div>
+                <i class="fa-solid fa-arrow-right flow-arrow"></i>
+                <div class="flow-item">
+                    <i class="fa-solid fa-user-group icon"></i>
+                    <p>Trabalha em equipe e lidera projetos.</p>
+                </div>
+                <i class="fa-solid fa-arrow-right flow-arrow"></i>
+                <div class="flow-item">
+                    <i class="fa-solid fa-book-open-reader icon"></i>
+                    <p>Aprende de forma autônoma e acompanha as mudanças.</p>
+                </div>
+                <i class="fa-solid fa-arrow-right flow-arrow"></i>
+                <div class="flow-item">
+                    <i class="fa-solid fa-globe icon"></i>
+                    <p>Atua com ética e impacto positivo na sociedade.</p>
+                </div>
+            </div>
+        </section>-->
+        <!-- 2. SEU CURSO -->
+<section id="curso" class="section section-gray reveal">
+    <h2 id="curso-titulo" class="section-title">2. CONHEÇA SEU CURSO: EIXO DE COMPUTAÇÃO</h2>
+    
+    <!-- Botões de Filtro -->
+    <div class="course-filter">
+        <button class="filter-btn active" data-eixo="computacao">Computação</button>
+        <button class="filter-btn" data-eixo="licenciatura">Licenciatura</button>
+        <button class="filter-btn" data-eixo="negocios">Negócios e Produção</button>
+    </div>
+
+    <div class="course-flow">
+        <div class="flow-item">
+            <i class="fa-solid fa-microchip icon"></i>
+            <p>Integra hardware e software para criar soluções completas.</p>
+        </div>
+        <i class="fa-solid fa-arrow-right flow-arrow"></i>
+        <div class="flow-item">
+            <i class="fa-solid fa-lightbulb icon"></i>
+            <p>Resolve problemas reais com tecnologia e inovação.</p>
+        </div>
+        <i class="fa-solid fa-arrow-right flow-arrow"></i>
+        <div class="flow-item">
+            <i class="fa-solid fa-user-group icon"></i>
+            <p>Trabalha em equipe e lidera projetos.</p>
+        </div>
+        <i class="fa-solid fa-arrow-right flow-arrow"></i>
+        <div class="flow-item">
+            <i class="fa-solid fa-book-open-reader icon"></i>
+            <p>Aprende de forma autônoma e acompanha as mudanças.</p>
+        </div>
+        <i class="fa-solid fa-arrow-right flow-arrow"></i>
+        <div class="flow-item">
+            <i class="fa-solid fa-globe icon"></i>
+            <p>Atua com ética e impacto positivo na sociedade.</p>
+        </div>
+    </div>
+</section>
+
+        <!-- 3. DIFERENCIAIS -->
+        <section id="diferenciais" class="section">
+            <h2 class="section-title">3. O QUE TORNA A UNIVESP DIFERENTE?</h2>
+            <div class="grid-cards-4">
+                <div class="card">
+                    <i class="fa-solid fa-people-group icon"></i>
+                    <h3>Projeto Integrador</h3>
+                    <p>Você e seu grupo resolvem problemas reais da comunidade em projetos práticos.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-route icon"></i>
+                    <h3>Trilha Estruturante</h3>
+                    <p>Disciplinas organizadas em etapas. Cada aprovação te leva para a próxima fase do curso.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-bullseye icon"></i>
+                    <h3>Metodologias Ativas</h3>
+                    <p>PBL e PjBL: você aprende fazendo, pesquisando e criando soluções reais.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-regular fa-heart icon"></i>
+                    <h3>Impacto Social</h3>
+                    <p>Seus projetos geram impacto positivo na comunidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FAQ -->
+        <section id="faq" class="section section-gray">
+            <h2 class="section-title">4. FAQ - DÚVIDAS FREQUENTES</h2>
+            <div class="faq-container">
+                <div class="faq-list">
+                    <div class="accordion">
+                        <button class="accordion-header">Por onde eu começo? <i class="fa-solid fa-plus"></i></button>
+                        <div class="accordion-body"><p>Comece acessando o AVA e verificando suas disciplinas iniciais e o calendário.</p></div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-header">Onde encontro o material de estudo? <i class="fa-solid fa-plus"></i></button>
+                        <div class="accordion-body"><p>Todo o material de estudo está disponível dentro do seu AVA (Canvas).</p></div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-header">Como funcionam as provas? <i class="fa-solid fa-plus"></i></button>
+                        <div class="accordion-body"><p>As avaliações finais costumam ser presenciais no seu polo de apoio.</p></div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-header">O que é o Projeto Integrador? <i class="fa-solid fa-plus"></i></button>
+                        <div class="accordion-body"><p>É um trabalho prático semestral feito em grupo para resolver um problema real da comunidade.</p></div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-header">Com que frequência vou ao polo? <i class="fa-solid fa-plus"></i></button>
+                        <div class="accordion-body"><p>Apenas para as avaliações presenciais e apresentações do Projeto Integrador.</p></div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-header">Onde tiro minhas dúvidas? <i class="fa-solid fa-plus"></i></button>
+                        <div class="accordion-body"><p>No fórum de dúvidas do AVA, diretamente com o seu Facilitador.</p></div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-header">Como solicitar documentos? <i class="fa-solid fa-plus"></i></button>
+                        <div class="accordion-body"><p>Acesse o sistema SEI UNIVESP para solicitações acadêmicas.</p></div>
+                    </div>
+                </div>
+                
+                <div class="dica-veterano">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <h3>Dica de veterano</h3>
+                    <p>"Organização e constância são seus maiores aliados. Pequenos passos diários te levam longe!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CHECKLIST -->
+        <section id="checklist" class="section">
+            <h2 class="section-title">5. CHECKLIST DO CALOURO</h2>
+            <div class="grid-cards-6">
+                <div class="card mini-card">
+                    <i class="fa-solid fa-laptop-code icon"></i><p>Acessar o AVA</p>
+                </div>
+                <div class="card mini-card">
+                    <i class="fa-solid fa-users icon"></i><p>Entrar no grupo da turma</p>
+                </div>
+                <div class="card mini-card">
+                    <i class="fa-solid fa-file-contract icon"></i><p>Ler o Manual do Aluno</p>
+                </div>
+                <div class="card mini-card">
+                    <i class="fa-regular fa-calendar-check icon"></i><p>Conhecer o calendário</p>
+                </div>
+                <div class="card mini-card">
+                    <i class="fa-solid fa-clipboard-list icon"></i><p>Organizar meu tempo de estudo</p>
+                </div>
+                <div class="card mini-card">
+                    <i class="fa-solid fa-clock icon"></i><p>Salvar datas das provas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. RECURSOS IMPORTANTES -->
+        <section id="recursos" class="section section-gray">
+            <h2 class="section-title">6. RECURSOS IMPORTANTES</h2>
+            <div class="grid-cards-6">
+                <div class="card mini-card">
+                    <i><a href="https://apps.univesp.br/manual-do-aluno/" target="_blank" class="fa-solid fa-book icon"></a></i><p>Manual do Aluno</p>
+                </div>
+                <div class="card mini-card"> <!--https://apps.univesp.br/manual-do-aluno/calendario-provas/-->
+                    <i class="fa-solid fa-book icon"></i><p>Calendário Acadêmico e Provas</p>
+                    <a href="https://apps.univesp.br/manual-do-aluno/calendario-academico/" target="_blank"><p>Calendário Acadêmico</p>
+                    <a href="https://apps.univesp.br/manual-do-aluno/calendario-provas/" target="_blank"><p>Calendario de provas</p></a>
+                </div>
+                <div class="card mini-card">
+                    <i><a href="https://univesp.br/polos/" target="_blank" class="fa-solid fa-book icon"></a></i><p>Polos de Apoio</p> 
+                </div>
+                <div class="card mini-card">
+                    <i><a href="https://apps.univesp.br/graduacao/portal-estagios/" target="_blank" class="fa-solid fa-book icon"></a></i><p>Portal de Estágios</p>
+                </div>
+                <div class="card mini-card">
+                    <i class="fa-solid fa-book icon"></i><p>UNIVESP TV</p>
+                    <a href="https://univesptv.com.br/" target="_blank"><p>Grade de Programação - Televisão</p>
+                    <a href="https://youtube.com/@univesptv?si=J4eFNRaSmYD4JG4l" target="_blank"><p>Canal do Youtube</p></a>
+                </div>
+                <div class="card mini-card">
+                     <i><a href="https://univesp.br/" target="_blank" class="fa-solid fa-book icon"></a></i><p>Site Institucional</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>"Na UNIVESP, autonomia faz parte da aprendizagem.<br>Mantenha a constância e lembre-se: você não está sozinho!"</p>
+            <div class="logo-footer">Guia dos<strong> Calouros</strong></div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

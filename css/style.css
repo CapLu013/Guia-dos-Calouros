@@ -1,0 +1,624 @@
+/* RESET E VARIÁVEIS BASE */
+:root {
+    --primary-color: #a31525; /* Vermelho UNIVESP */
+    --dark-text: #333333;
+    --gray-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* SCROLL SUAVE */
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* NAVEGAÇÃO FIXA */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.logo-univesp {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--dark-text);
+    letter-spacing: 1px;
+}
+
+.logo-univesp strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* BOTÕES */
+.btn {
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #8a101f;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--dark-text);
+    border-color: var(--dark-text);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gray-bg);
+}
+
+/* SEÇÕES COMUNS */
+.section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.section-gray {
+    background-color: var(--gray-bg);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+/* HERO SECTION */
+
+/* Ajusta o container principal para alinhar perfeitamente os lados */
+.hero {
+    position: relative; /* Essencial para controlar a imagem absoluta lá dentro */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5% 0 8%;
+    background: radial-gradient(circle at 100% 50%, #fdf5f5 0%, #ffffff 50%);
+    min-height: 80vh; /* Mantém uma altura imponente */
+    overflow: hidden; /* Corta os pés dos personagens perfeitamente na linha inferior */
+}
+
+/* O texto agora tem o espaço garantido e nunca mais vai desalinhar */
+.hero-content {
+    width: 45%;
+    max-width: 550%; /* Garante metade da tela livre para o texto respirar */
+    text-align: left;
+    z-index: 2; /* Garante que o texto fique por cima de qualquer fundo */
+    padding-bottom: 20px;
+}
+
+.subtitle {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* O container da imagem vira uma janela flutuante à direita */
+.hero-image {
+    position: absolute;
+    right: 5%; /* Alinha o bloco na lateral direita da tela */
+    bottom: 0;  /* Cola a base no chão da seção */
+    width: 38vw; /* Define a área onde a imagem pode expandir */
+    max-width: 580px;
+    min-width: 320;
+    height: 100%;
+    display: flex;
+    align-items: flex-end; /* Garante que os personagens fiquem de pé no chão */
+    justify-content: flex-end;
+    z-index: 1;
+    pointer-events: none; /* Permite clicar nos botões se a imagem sobrepor de leve */
+}
+
+/*Remove ou substitua o antigo '.illustration-placeholder' por este: */
+ /* A imagem agora pode crescer livremente sem esmagar o texto */
+.banner-img {
+    width: 170%;
+    height: 95%; /* Força os personagens a ocuparem quase a altura INTEIRA do banner! */
+    max-height: 580px; /* Define um limite máximo elegante para telas gigantes */
+    object-fit: contain;
+    display: block;
+    transform: translateY(10px); /* Ajuste milimétrico para assentar bem na base */
+    filter: drop-shadow(-15px 15px 25px rgba(0, 0, 0, 0.08));
+    transition: transform 0.5s ease;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Efeito ao passar o mouse */
+.hero:hover .banner-img {
+    transform: translateY(0px) scale(1.02);
+}
+
+/*.illustration-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ffe8ea;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: var(--primary-color);
+}*/
+
+/* GRIDS E CARDS */
+.grid-cards-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-cards-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.grid-cards-6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.mini-card {
+    padding: 20px 15px;
+}
+
+.mini-card .icon {
+    font-size: 2rem;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit; /* Impede o navegador de pintar o texto de azul/roxo */
+    display: block; /* O bloco inteiro do link se comporta como o card */
+}
+
+/* Efeito ao passar o mouse por cima do card clicável */
+.card-link:hover .card {
+    border-color: var(--primary-color); /* Borda fica vermelha no hover */
+    transform: translateY(-5px); /* Efeito de flutuar */
+    box-shadow: 0 10px 20px rgba(163, 21, 37, 0.1); /* Sombra avermelhada bem sutil */
+}
+
+/* FLOW DO CURSO */
+.course-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.flow-item {
+    text-align: center;
+    flex: 1;
+}
+
+.flow-item .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+}
+
+.flow-item p {
+    font-size: 0.9rem;
+}
+
+.flow-arrow {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+/* FAQ E DICA */
+.faq-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.faq-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    background-color: #fafafa;
+}
+
+.accordion-body p {
+    padding: 0 20px 15px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.accordion.active .accordion-body {
+    max-height: 200px;
+}
+
+.accordion.active .accordion-header i {
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.dica-veterano {
+    flex: 1;
+    background-color: #fff0f1;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.dica-veterano .fa-lightbulb {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.dica-veterano h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.dica-veterano p {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.logo-footer {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.logo-footer strong {
+    font-weight: 700;
+}
+
+/* RESPONSIVIDADE BÁSICA */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content, .hero-image {
+        max-width: 100%;
+        width: 100%;
+    }
+    .hero-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .course-flow {
+        flex-direction: column;
+    }
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 15px 0;
+    }
+    .faq-container {
+        flex-direction: column;
+    }
+    .nav-links {
+        display: none; /* Em um projeto real, adicionar menu hambúrguer aqui */
+    }
+}
+/* =========================================
+   NOVAS FUNCIONALIDADES 
+========================================= */
+
+/* 1. BARRA DE PROGRESSO */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: var(--primary-color);
+    z-index: 10000;
+    border-radius: 0 2px 2px 0;
+}
+
+/* 2. DARK MODE - Variáveis e Adaptações */
+body.dark-mode {
+    --dark-text: #f0f0f0;
+    --gray-bg: #121212;
+    --border-color: #333333;
+    background-color: #0a0a0a;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .card,
+body.dark-mode .accordion,
+body.dark-mode .accordion-header {
+    background-color: #1a1a1a;
+    color: var(--dark-text);
+}
+
+body.dark-mode .accordion-body {
+    background-color: #242424;
+}
+
+body.dark-mode .hero {
+    background: radial-gradient(circle at 100% 50%, #2a1114 0%, #0a0a0a 50%);
+}
+
+body.dark-mode .dica-veterano {
+    background-color: #2a1114;
+}
+
+/* Estilo do Botão Dark Mode */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--dark-text);
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 15px;
+    transition: transform 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+/* 3. SCROLL REVEAL (Animação) */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. FILTRO DE CURSOS */
+.course-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 24px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.flow-item {
+    transition: opacity 0.4s ease; /* Transição suave ao trocar de curso */
+}
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5% 0 5%;
+        min-height: auto;
+        overflow: visible;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* No celular ela deixa de flutuar e volta para o fluxo normal */
+    .hero-image {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    .banner-img {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        transform: translateY(10px);
+    }
+}
+
+/* =========================================
+   ANIMAÇÃO DE FLUTUAR (FLOAT)
+========================================= */
+@keyframes float {
+    0% {
+        transform: translateY(10px); /* Posição inicial (levemente para baixo) */
+    }
+    50% {
+        transform: translateY(-5px); /* Sobe suavemente 15 pixels */
+    }
+    100% {
+        transform: translateY(10px); /* Retorna à posição inicial */
+    }
+}
+/* =========================================
+   CORREÇÃO DO DESALINHAMENTO DO SCROLL
+========================================= */
+
+/* Aplica o espaçamento de segurança em todas as seções que possuem ID (alvos do menu) */
+section[id] {
+    /* Ajuste esse valor (80px) de acordo com a altura aproximada do seu menu fixo */
+    scroll-margin-top: 85px; 
+}
